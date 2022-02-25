@@ -7,18 +7,20 @@
     <title>Inicia sesión</title>
 </head>
 <body>
-    <form action="src/php/procesar.php" method="post">
+    <form action="src/php/procesar.php" method="post" onsubmit="return validations()">
+
         <div>
             <label for="lmail">Correo</label>
-            <input type="email" name="lmail" id="mail">
+            <input type="email" name="lmail" id="mail" required>
         </div>
 
         <div>
             <label for="lpassword">Contraseña</label>
-            <input type="password" name="lpassword" id="password">
+            <input type="password" name="lpassword" id="password" required>
         </div>
 
-        <input type="submit" value="Ingresar">
+        <input type="submit" value="Ingresar" >
+
     </form>
 
     <div>
@@ -26,4 +28,5 @@
         <a href="sign-up.html">Crea una ahora.</a>
     </div>
 </body>
+<script src="src/js/script.js"></script>
 </html>
